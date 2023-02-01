@@ -93,6 +93,9 @@ h3{
 }
 .todo-group-hade{
   padding: 16px 0;
+  position: sticky;
+  top: 0;
+  background-color: #F2F4F7;
 }
 /* card stayle  */
 img {
@@ -127,4 +130,23 @@ i{
   background-color: rgba(212, 212, 212, 0.855);
   padding: 8px;
   border-radius: 10px;
+}
+
+/* model part  */
+.model-container{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.375);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.model{
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+
 }

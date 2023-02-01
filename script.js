@@ -1,13 +1,8 @@
 import data from "./data.js";
-const attach = document.getElementsByClassName("add_file")
-console.log(attach);
-
-
 const TodoContainer = document.getElementsByClassName("todo-container")[0];
+const hasib = document.getElementsByClassName("hasib")[0]
+const modelRemove = document.getElementsByClassName("model-remove")[0]
 
-const handleClick = () => {
-  console.log("clicked");
-};
 
 const CreteElement = (tagName, attr, attrValue) => {
   const element = document.createElement(tagName);
@@ -66,24 +61,26 @@ data.forEach((groupTodo) => {
               <h4>30-12-2022</h4></div>
           </div>
     `
-    // const AttachmentButton = CreteElement("button", "class", "attachment-btn");
-
-    // // TodoItem.innerText = todoItem.clientName;
-    // AttachmentButton.innerText = "Click Me";
-    // AttachmentButton.addEventListener("click", () => {
-    //   console.log("click");
-    // });
-
-    // TodoItem.appendChild(AttachmentButton);
+    
     TodoGroup.appendChild(TodoItem);
   }); 
 
   TodoContainer.appendChild(TodoGroup);
 });
 
-document.getElementsByClassName("todo-item")[0].addEventListener("click", ()=>{
-    console.log("ami");
+document.getElementsByClassName("add_file")[0].addEventListener("click", ()=>{
+  console.log("ami");
+  const ModelContainer = CreteElement("div", "class", "model-container");
+  ModelContainer.innerHTML = `
+    <div class="model">
+    <i class="model-remove fa-solid fa-x"></i>
+    </div>`
+hasib.appendChild(ModelContainer);
+});
+modelRemove.addEventListener("click", () => {
+  ModelContainer.remove();
 })
+
 
 // let TodoItem = ""
 // console.log(data);
