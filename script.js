@@ -1,7 +1,6 @@
 import data from "./data.js";
 const TodoContainer = document.getElementsByClassName("todo-container")[0];
 const hasib = document.getElementsByClassName("hasib")[0]
-const modelRemove = document.getElementsByClassName("model-remove")[0]
 
 
 const CreteElement = (tagName, attr, attrValue) => {
@@ -69,18 +68,42 @@ data.forEach((groupTodo) => {
 });
 
 document.getElementsByClassName("add_file")[0].addEventListener("click", ()=>{
-  console.log("ami");
   const ModelContainer = CreteElement("div", "class", "model-container");
   ModelContainer.innerHTML = `
     <div class="model">
     <i class="model-remove fa-solid fa-x"></i>
     </div>`
-hasib.appendChild(ModelContainer);
+  hasib.appendChild(ModelContainer);
 });
-modelRemove.addEventListener("click", () => {
-  ModelContainer.remove();
+
+document.getElementsByClassName("model-remove")[0].addEventListener("click", ()=>{
+  hasib.remove()
 })
 
 
 // let TodoItem = ""
 // console.log(data);
+
+
+const fileInput = document.querySelector("input"); 
+document.querySelector("form").addEventListener("click", ()=>{
+  fileInput.click()
+})
+var fileName = ["ami", "tomi"]
+fileInput.onchange = ({target}) =>{
+  let file = target.files[0]
+  fileName.push(file.name)
+  console.log(fileName);
+}
+
+const uploadAria = document.getElementById("upload-aria");
+fileName.forEach((files)=>{
+  const UplodeData = CreteElement("div", "class", "upload");
+  UplodeData.innerHTML = `
+  <i class="fas fa-file-alt"></i>
+  <h2>${files}</h2>
+  `
+  console.log(UplodeData);
+  uploadAria.appendChild(UplodeData);
+  
+});
