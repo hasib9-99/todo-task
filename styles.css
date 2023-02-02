@@ -100,10 +100,11 @@ h3{
 }
 /* card stayle  */
 img {
-  width: 39px;
-  height: 42px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   margin: 8px;
+  object-fit: cover;
 }
 h4{
   color: rgb(70, 70, 70);
@@ -122,7 +123,7 @@ i{
   color: rgb(70, 70, 70);
 }
 .todo-ditels{
-  padding: 20px 0;
+  padding: 14px 0;
 }
 .todo-ditels-left{
   padding-left: 8px;

@@ -1,6 +1,5 @@
 import data from "./data.js";
 const TodoContainer = document.getElementsByClassName("todo-container")[0];
-const hasib = document.getElementsByClassName("hasib")[0];
 const uploadAria = document.getElementById("upload-aria");
 const fileInput = document.querySelector("input"); 
 
@@ -49,8 +48,8 @@ data.forEach((groupTodo) => {
             </div>
           </div>
           <div class="todo-footer d-flex justify-content-between align-items-center">
-            <img src="${todoItem.clientPhoto}" alt="assigned Person">
-            <img src="${todoItem.clientPhoto}" alt="assigned Person">
+            <img src="${todoItem.assignedPerson[0]}" alt="assigned Person">
+            <img src="${todoItem.assignedPerson[1]}" alt="assigned Person">
             <div class="comment d-flex align-items-center">
               <i class="fa-brands fa-weixin"></i><h4>15</h4>
             </div>
