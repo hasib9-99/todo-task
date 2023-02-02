@@ -134,9 +134,7 @@ i{
 }
 
 /* model part  */
-.hasib{
-  opacity: 5;
-}
+
 .model-container{
   width: 100%;
   height: 100%;
@@ -147,6 +145,7 @@ i{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 .model{
   width: 400px;
@@ -176,6 +175,11 @@ form i{
 form p{
   font-size: 20px;
   color: #2070BC;
+}
+#upload-aria{
+  width: 100%;
+  height: 250px;
+  overflow-y: scroll;
 }
 .upload{
   display: flex;
